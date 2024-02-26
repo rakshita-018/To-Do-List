@@ -1,99 +1,127 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.container{
-    width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #BB73E0,#FF8DDB );
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #bb73e0, #ff8ddb);
+  padding: 10px;
+}
+.todo-web {
+  width: 100%;
+  max-width: 600px;
+  background-color: #ffffff91;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 30px;
+}
+.todo-web h2 {
+  color: #002765;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.todo-web h2 img {
+  width: 40px;
+  margin-left: 10px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+#inputBox {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-size: 15px;
+}
+button {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background-color: #e676bb;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+ul li {
+  list-style: none;
+  font-size: 18px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+ul li::before {
+  content: " ";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border: 1px solid grey;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+ul li.checked::before {
+  background-image: url(image/checked.jpg);
+  border: none;
+}
+ul li span {
+  position: absolute;
+  right: 0;
+  color: #555;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 25px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+ul li span:hover {
+  background-color: #edeef0;
+}
+@media (max-width: 700px) {
+  .todo-web {
+    padding: 30px;
+  }
+  .row {
+    padding-left: 15px;
+  }
+  #inputBox {
     padding: 10px;
-}
-.todo-web{
-    width: 100%;
-    max-width: 600px;
-    background-color: #ffffff91;
-    margin: 100px auto 20px;
-    padding: 40px 30px 70px;
-    border-radius: 30px;
-}
-.todo-web h2{
-    color: #002765;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-.todo-web h2 img{
-    width: 40px;
-    margin-left:10px;
-}
-.row{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #edeef0;
-    border-radius: 30px;
-    padding-left: 20px;
-    margin-bottom: 25px;
-}
-#inputBox{
-   flex: 1;
-   border: none;
-   outline: none;
-   background: transparent;
-   padding: 10px;
-   font-size: 15px;
-}
-button{
-    border: none;
-    outline: none;
-    padding: 16px 50px;
-    background-color: #e676bb;
-    color: #fff;
-    border-radius: 30px;
-    font-size: 16px;
-    cursor: pointer;
-}
-ul li{
-    list-style: none;
-    font-size: 18px;
-    padding: 12px 8px 12px 50px;
-    user-select: none;
-    cursor: pointer;
-    position: relative;
-}
-ul li::before{
-    content: " ";
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    border: 1px solid grey;
-    border-radius: 50%;
-    background-size: cover;
-    background-position: center;
-    top: 12px;
-    left: 8px;
-}
-ul li.checked{
-    color: #555;
-    text-decoration: line-through;
-}
-ul li.checked::before{
-    background-image: url(image/checked.jpg);
-    border: none;
-}
-ul li span{
-    position: absolute;
-    right: 0;
-    color: #555;
-    top: 5px;
-    width: 40px;
-    height: 40px;
-    font-size: 25px;
-    line-height: 40px;
-    text-align: center;
-    border-radius: 50%;
-}
-ul li span:hover{
-    background-color: #edeef0;
+    font-size: 15px;
+  }
+  button {
+    padding: 13px 25px;
+    font-size: 13px;
+  }
+  ul li {
+    font-size: 15px;
+    padding: 12px 8px 12px 40px;
+  }
+  ul li::before {
+    height: 15px;
+    width: 15px;
+  }
+  ul li span {
+    width: 30px;
+    height: 30px;
+  }
 }
